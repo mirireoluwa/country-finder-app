@@ -18,7 +18,6 @@ const SearchBox = ({ q }: Props) => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const isFirstSearch = q === null;
-    const inputValue = e.currentTarget.value.toLowerCase(); // Convert input value to lowercase
     debouncedSubmit(e.currentTarget.form as HTMLFormElement, !isFirstSearch);
   };
 
